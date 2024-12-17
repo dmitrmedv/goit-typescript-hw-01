@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// async function fetchData(url: string): Promise {
+// async function fetchData(url: string): Promise<string> {
 //   try {
 //     const response = await axios.get(url);
 //     return response.data;
@@ -9,10 +9,14 @@ import axios from "axios";
 //   }
 // }
 
-interface addFn {
-  (num1: number, num2: number): number;
+interface User {
+  username: string;
+  age: number;
+  isActive: boolean;
 }
 
-let fn: addFn = (first, second) => first + second;
+function displayUserProfile({ username, age }: User): string {
+  return `Hello, I am ${username} and i ${age} years old...`;
+}
 
-console.log(fn(90, 10));
+displayUserProfile({ username: "Alex", age: 24, isActive: false });
