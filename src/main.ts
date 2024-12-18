@@ -1,5 +1,8 @@
 import "./style.css";
-import "./basic/4";
-import "./basic/5";
-import "./basic/6";
-import "./basic/7";
+
+function identity<T>(arg: T[]): T {
+  return arg[0];
+}
+
+let fn = identity([9, 8, 7, 6]);
+console.log(fn);

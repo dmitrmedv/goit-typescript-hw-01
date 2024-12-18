@@ -9,14 +9,9 @@ import axios from "axios";
 //   }
 // }
 
-interface User {
-  username: string;
-  age: number;
-  isActive: boolean;
+interface addFn {
+  (one: number, two: number): number;
 }
+let fn: addFn = (one, two) => one + two;
 
-function displayUserProfile({ username, age }: User): string {
-  return `Hello, I am ${username} and i ${age} years old...`;
-}
-
-displayUserProfile({ username: "Alex", age: 24, isActive: false });
+console.log(fn(90, 70));
