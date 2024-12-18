@@ -8,10 +8,3 @@ import axios from "axios";
 //     throw new Error(`Error fetching from ${url}: ${error}`);
 //   }
 // }
-
-interface addFn {
-  (one: number, two: number): number;
-}
-let fn: addFn = (one, two) => one + two;
-
-console.log(fn(90, 70));
